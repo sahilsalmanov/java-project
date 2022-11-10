@@ -82,10 +82,10 @@ document.getElementById('myInput').addEventListener("keydown", (e) => {
 
 // Sorting of items
 const myList = document.querySelector('#myUL')
-const photo = document.querySelector(".sort2");
-photo.addEventListener("click", () => {
-    photo.style.display = "none";
-    photo1.style.display = "block";
+const sort22 = document.querySelector(".sort2");
+sort22.addEventListener("click", () => {
+    sort22.style.display = "none";
+    sort33.style.display = "block";
     let arr = [];
     const info = [...myList?.children];
     info.forEach(item => {
@@ -94,14 +94,20 @@ photo.addEventListener("click", () => {
     arr.sort();
     myList.innerHTML = "";
     arr.forEach(item => {
-        let liS = `<li>${item}</li>`;
-        myList.innerHTML += liS;
+        let linew = `<li>${item}</li>`;
+        myList.innerHTML += linew;
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.remove()
+          }
+        }
     });
 });
-const photo1 = document.querySelector(".sort3");
-photo1.addEventListener("click", () => {
-    photo1.style.display = "none";
-    photo.style.display = "block";
+const sort33 = document.querySelector(".sort3");
+sort33.addEventListener("click", () => {
+    sort33.style.display = "none";
+    sort22.style.display = "block";
     let arr = [];
     const info = [...myList?.children];
     info.forEach(item => {
@@ -111,8 +117,14 @@ photo1.addEventListener("click", () => {
     arr.reverse();
     myList.innerHTML = "";
     arr.forEach(item => {
-        let liS = `<li>${item}</li>`;
-        myList.innerHTML += liS;
+        let linew = `<li>${item}</li>`;
+        myList.innerHTML += linew;
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.remove()
+          }
+        }
     });
 });
 
