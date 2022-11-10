@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+   <div class="todo">
+    <div id="myDIV" class="header">
+        <div class="top"></div>
+        <div class="bottom">
+        <h2>To-Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span class="close2">x</span>
+        <div class="sort">
+            <button class="sort2"><i class="fa-solid fa-arrow-down-short-wide"></i></button>
+            <button class="sort3"><i class="fa-solid fa-arrow-up-short-wide"></i></button>
+            
+        </div>
+    </div>
+      </div>
+      
+      <ul id="myUL">
+
+      </ul>
+    
+      <div class="purple">
+        <button class="purple-plus"><i class="fa-solid fa-plus"></i></button> 
+     <span onclick="newElement()" class="addBtn">Добавить</span>
+     </div>
+    </div>
+</div>
+    <script src="./script.js"></script>
+</body>
+</html>
