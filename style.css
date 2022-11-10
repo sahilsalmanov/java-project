@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    height: 100vh;
+    height: 850px;
     justify-content: center;
     align-items: center;
     background-color: teal;
@@ -199,4 +199,17 @@ cursor: pointer;
 border: none;
 }
 
-
+@media screen and (min-width:320px) and (max-width: 520px) {
+    .todo {
+        width: 70%;
+    }
+    .header {
+        width: 100%
+    }
+    ul {
+        width: 100%;
+    }
+    .purple {
+        width: 80%;
+    }
+}

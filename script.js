@@ -49,7 +49,7 @@ function newElement() {
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
-      div.style.display = "none";
+      div.remove()
     }
   }
 }
@@ -65,6 +65,7 @@ function add() {
     document.getElementById('myInput').style.display = 'block'
     close2.style.display = 'block'
     close2.style.paddingTop = '10px'
+    document.querySelector('#myInput').value = ''
 }
 
 document.getElementById('myInput').addEventListener("keydown", (e) => {
@@ -97,12 +98,6 @@ photo.addEventListener("click", () => {
         myList.innerHTML += liS;
     });
 });
-photo.addEventListener("mouseover", () => {
-    photo.src = "./assets/img/sort-bold1.png";
-});
-photo.addEventListener("mouseout", () => {
-    photo.src = "./assets/img/sort1.png";
-});
 const photo1 = document.querySelector(".sort3");
 photo1.addEventListener("click", () => {
     photo1.style.display = "none";
@@ -120,9 +115,5 @@ photo1.addEventListener("click", () => {
         myList.innerHTML += liS;
     });
 });
-photo1.addEventListener("mouseover", () => {
-    photo1.src = "./assets/img/sort-bold2.png";
-});
-photo1.addEventListener("mouseout", () => {
-    photo1.src = "./assets/img/sort2.png";
-});
+
+
